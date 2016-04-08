@@ -21,6 +21,7 @@ export const Menu = props => {
       'vertical': props.isVertical,
       'simple': props.isSimple,
       'nested': props.isNested,
+      'dropdown': props.isDropdown,
       'medium-horizontal': props.horizontalOnMedium
     },
     generalClassNames(props)
@@ -37,6 +38,7 @@ Menu.propTypes = {
   iconsOnTop: PropTypes.bool,
   isExpanded: PropTypes.bool,
   isVertical: PropTypes.bool,
+  isDropdown: PropTypes.bool,
   isSimple: PropTypes.bool,
   isNested: PropTypes.bool,
   isHorizontalOnMedium: PropTypes.bool

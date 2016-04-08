@@ -52,6 +52,12 @@ describe('Menu component', () => {
     expect(component).to.not.have.attr('isExpanded');
   });
 
+  it('sets dropdown', () => {
+    const component = render(<Menu isDropdown/>);
+    expect(component).to.have.className('dropdown');
+    expect(component).to.not.have.attr('isDropdown');
+  });
+
   it('sets vertical', () => {
     const component = render(<Menu isVertical/>);
     expect(component).to.have.className('vertical');

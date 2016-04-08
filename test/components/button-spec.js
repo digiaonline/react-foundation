@@ -17,7 +17,7 @@ describe('Button component', () => {
     const component = render(<Button/>);
     expect(component).to.have.className('button');
   });
-  
+
   it('sets custom class name', () => {
     const component = render(<Button className="my-button"/>);
     expect(component).to.have.className('my-button');
