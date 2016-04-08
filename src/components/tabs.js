@@ -52,8 +52,7 @@ export const TabItem = props => {
 
 TabItem.propTypes = {
   ...GeneralPropTypes,
-  isActive: PropTypes.bool,
-
+  isActive: PropTypes.bool
 };
 
 /**
@@ -106,6 +105,5 @@ export const PanelItem = props => {
 
 PanelItem.propTypes = {
   ...GeneralPropTypes,
-  isActive: PropTypes.bool,
-
+  isActive: PropTypes.bool
 };

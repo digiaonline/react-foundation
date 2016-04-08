@@ -37,7 +37,7 @@ describe('Tabs component', () => {
 
 });
 
-describe('TabsItem component', () => {
+describe('TabItem component', () => {
 
   it('sets tag name', () => {
     const component = render(<TabItem/>);
