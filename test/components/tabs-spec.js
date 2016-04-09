@@ -3,7 +3,6 @@ import React from 'react';
 import { render } from 'enzyme';
 import { expect } from 'chai';
 import { Tabs, TabItem, PanelContainer, PanelItem } from '../../src/components/tabs';
-import { Alignments } from '../../src/enums';
 
 // TODO: Add test cases for invalid enum values
 

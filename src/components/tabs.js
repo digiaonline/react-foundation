@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { MenuAlignments } from '../enums';
 import { GeneralPropTypes, createClassName, generalClassNames, objectValues } from '../utils';
 
 /**
