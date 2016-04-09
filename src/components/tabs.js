@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { GeneralPropTypes, createClassName, generalClassNames, objectValues } from '../utils';
+import { GeneralPropTypes, createClassName, generalClassNames } from '../utils';
 
 /**
  * Tabs component.
