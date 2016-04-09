@@ -41,7 +41,7 @@ Menu.propTypes = {
   isDropdown: PropTypes.bool,
   isSimple: PropTypes.bool,
   isNested: PropTypes.bool,
-  isHorizontalOnMedium: PropTypes.bool
+  horizontalOnMedium: PropTypes.bool
 };
 
 /**

@@ -4,6 +4,7 @@ export { Button, Link } from './components/button';
 export { ButtonGroup } from './components/button-group';
 export { Callout } from './components/callout';
 export { CloseButton } from './components/close-button';
+export { Reveal } from './components/reveal';
 export { FlexVideo } from './components/flex-video';
 export { Row, Column } from './components/grid';
 export { Block, Inline } from './components/element';
@@ -18,4 +19,3 @@ export { Switch, SwitchInput, SwitchPaddle, SwitchActive, SwitchInactive } from 
 export { Thumbnail, ThumbnailLink } from './components/thumbnail';
 export { TopBar, TopBarTitle, TopBarLeft, TopBarRight } from './components/top-bar';
 export { Breakpoints, Colors, Sizes, Alignments, FloatTypes, InputTypes } from './enums';
-
