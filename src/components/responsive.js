@@ -24,11 +24,11 @@ export class ResponsiveNavigation extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.update.bind(this));
+    window.addEventListener('resize', this.update);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.update.bind(this));
+    window.removeEventListener('resize', this.update);
   }
 
   /**
@@ -36,7 +36,7 @@ export class ResponsiveNavigation extends Component {
    * While this might seem like a sub-optimal solution, it is actually the only solution.
    * Using 'hide' and 'show' -classes won't work because they set display with `!important`.
    */
-  update() {
+  update = () => {
     const { breakpoint } = this.props;
 
     this.setState({
@@ -48,7 +48,7 @@ export class ResponsiveNavigation extends Component {
   /**
    * Called when the menu icon is clicked.
    */
-  toggle() {
+  toggle = () => {
     this.setState({
       isTopBarVisible: !this.state.isTopBarVisible
     });
@@ -71,7 +71,7 @@ export class ResponsiveNavigation extends Component {
     return (
       <div {...removeProps(this.props, ['breakpoint'])}>
         <TitleBar {...titleBarProps} isHidden={!isTitleBarVisible}>
-          <MenuIcon {...menuIconProps} onClick={this.toggle.bind(this)}/>
+          <MenuIcon {...menuIconProps} onClick={this.toggle}/>
           <TitleBarTitle {...titleBarTitleProps}/>
         </TitleBar>
         <TopBar {...topBarProps} isHidden={!isTopBarVisible}>
