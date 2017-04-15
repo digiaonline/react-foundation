@@ -17,6 +17,9 @@ export class ResponsiveNavigation extends Component {
       isTitleBarVisible: true,
       isTopBarVisible: false
     };
+
+    this.update = this.update.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
   componentWillMount() {
@@ -36,7 +39,7 @@ export class ResponsiveNavigation extends Component {
    * While this might seem like a sub-optimal solution, it is actually the only solution.
    * Using 'hide' and 'show' -classes won't work because they set display with `!important`.
    */
-  update = () => {
+  update() {
     const { breakpoint } = this.props;
 
     this.setState({
@@ -48,7 +51,7 @@ export class ResponsiveNavigation extends Component {
   /**
    * Called when the menu icon is clicked.
    */
-  toggle = () => {
+  toggle() {
     this.setState({
       isTopBarVisible: !this.state.isTopBarVisible
     });
