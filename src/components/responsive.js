@@ -17,6 +17,9 @@ export class ResponsiveNavigation extends Component {
       isTitleBarVisible: true,
       isTopBarVisible: false
     };
+
+    this.update = this.update.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
   componentWillMount() {
@@ -24,11 +27,11 @@ export class ResponsiveNavigation extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.update.bind(this));
+    window.addEventListener('resize', this.update);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.update.bind(this));
+    window.removeEventListener('resize', this.update);
   }
 
   /**
@@ -71,7 +74,7 @@ export class ResponsiveNavigation extends Component {
     return (
       <div {...removeProps(this.props, ['breakpoint'])}>
         <TitleBar {...titleBarProps} isHidden={!isTitleBarVisible}>
-          <MenuIcon {...menuIconProps} onClick={this.toggle.bind(this)}/>
+          <MenuIcon {...menuIconProps} onClick={this.toggle}/>
           <TitleBarTitle {...titleBarTitleProps}/>
         </TitleBar>
         <TopBar {...topBarProps} isHidden={!isTopBarVisible}>
