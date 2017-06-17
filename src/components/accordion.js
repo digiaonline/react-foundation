@@ -61,6 +61,9 @@ export const AccordionContent = (props) => {
   const className = createClassName(
     props.noDefaultClassName ? null : 'accordion-content',
     props.className,
+    {
+      'is-active': props.isActive
+    },
     generalClassNames(props)
   );
 
@@ -71,6 +74,7 @@ export const AccordionContent = (props) => {
 
 AccordionContent.propTypes = {
   ...GeneralPropTypes,
+  isActive: PropTypes.bool
 };
 
 /**
