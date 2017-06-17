@@ -1,3 +1,4 @@
+export { Accordion, AccordionItem, AccordionTitle, AccordionContent } from './components/accordion';
 export { Badge } from './components/badge';
 export { Breadcrumbs, BreadcrumbItem } from './components/breadcrumbs';
 export { Button, Link } from './components/button';
