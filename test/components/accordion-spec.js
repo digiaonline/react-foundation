@@ -119,6 +119,12 @@ describe('AccordionContent component', () => {
     expect(component).to.have.className('my-accordion-container');
   });
 
+  it('sets active', () => {
+    const component = render(<AccordionContent isActive/>);
+    expect(component).to.have.className('is-active');
+    expect(component).to.not.have.attr('isActive');
+  });
+
   it('sets contents', () => {
     const component = render(<AccordionContent>Text</AccordionContent>);
     expect(component).to.have.text('Text');
