@@ -122,3 +122,29 @@ export function removeProps(object, remove) {
 export function isDefined(value) {
   return typeof value !== 'undefined';
 }
+
+/**
+ * Adds a breakpoint to a class if breakpoint is specified.
+ *
+ * @param {String} prop
+ * @param {String} size
+ * @returns {string}
+ */
+export function addBreakpoint(prop, size) {
+  return size === 'all' ? prop : `${size}-${prop}`;
+}
+
+/**
+ * Sets grid and gutters direction (horizontal or vertical).
+ *
+ * @param {boolean} isVertical
+ * @param {String} gutters
+ * @returns {string}
+ */
+export function setDirection(isVertical, gutters = null) {
+  if (gutters) {
+    return isVertical === true ? `grid-${gutters}-y` : `grid-${gutters}-x`;
+  } else {
+    return isVertical === true ? 'grid-y' : 'grid-x';
+  }
+}

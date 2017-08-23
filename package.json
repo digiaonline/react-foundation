@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^4.2.1",
     "estraverse-fb": "^1.3.1",
     "expect": "^1.15.1",
-    "foundation-sites": "^6.2.0",
+    "foundation-sites": "^6.4.3",
     "husky": "^0.13.4",
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^8.1.0",
