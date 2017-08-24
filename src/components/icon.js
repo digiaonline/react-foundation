@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Icon component.
@@ -22,6 +22,7 @@ export const Icon = (props) => {
 
 Icon.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   name: PropTypes.string.isRequired,
   prefix: PropTypes.string
 };

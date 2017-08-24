@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Pagination component.
@@ -26,6 +26,7 @@ export const Pagination = (props) => {
 
 Pagination.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isCentered: PropTypes.bool
 };
 
@@ -52,6 +53,7 @@ export const PaginationItem = (props) => {
 
 PaginationItem.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isCurrent: PropTypes.bool,
   isDisabled: PropTypes.bool
 };

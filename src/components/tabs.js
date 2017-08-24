@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Tabs component.
@@ -26,6 +26,7 @@ export const Tabs = (props) => {
 
 Tabs.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isVertical: PropTypes.bool
 };
 
@@ -52,6 +53,7 @@ export const TabItem = (props) => {
 
 TabItem.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isActive: PropTypes.bool
 };
 
@@ -78,6 +80,7 @@ export const TabsContent = (props) => {
 
 TabsContent.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isActive: PropTypes.bool,
   isVertical: PropTypes.bool
 };
@@ -105,5 +108,6 @@ export const TabPanel = (props) => {
 
 TabPanel.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isActive: PropTypes.bool
 };

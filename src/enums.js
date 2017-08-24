@@ -259,3 +259,14 @@ export const ExtendedBreakpoints = {
   XXLARGE: 'xxlarge',
   ALL: 'all'
 };
+
+/**
+ * Space control enumerable.
+ *
+ * @type {Object}
+ */
+export const SpaceControls = {
+  AUTO: 'auto',
+  GROW: 'grow',
+  SHRINK: 'shrink'
+};

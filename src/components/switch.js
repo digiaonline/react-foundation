@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SwitchSizes, SwitchInputTypes } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectValues } from '../utils';
 
 let currentId = 0;
 
@@ -37,6 +37,7 @@ export const Switch = props => {
 
 Switch.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   size: PropTypes.oneOf(objectValues(SwitchSizes)),
   id: PropTypes.string
 };

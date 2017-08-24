@@ -1,5 +1,5 @@
 import React from 'react';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Thumbnail component.
@@ -21,7 +21,8 @@ export const Thumbnail = (props) => {
 };
 
 Thumbnail.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };
 
 /**
@@ -46,5 +47,6 @@ export const ThumbnailLink = (props) => {
 };
 
 ThumbnailLink.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };

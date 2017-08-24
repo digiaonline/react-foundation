@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MenuAlignments } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
 
 /**
  * Menu component.
@@ -35,6 +35,7 @@ export const Menu = (props) => {
 
 Menu.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   alignment: PropTypes.oneOf(objectValues(MenuAlignments)),
   iconsOnTop: PropTypes.bool,
   isExpanded: PropTypes.bool,
@@ -67,6 +68,7 @@ export const MenuItem = (props) => {
 
 MenuItem.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isActive: PropTypes.bool
 };
 

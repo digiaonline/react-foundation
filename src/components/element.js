@@ -1,5 +1,5 @@
 import React from 'react';
-import { createClassName, generalClassNames, GeneralPropTypes, removeProps, objectKeys } from '../utils';
+import { createClassName, generalClassNames, GeneralPropTypes, FlexboxPropTypes, removeProps, objectKeys } from '../utils';
 
 /**
  * Div component.
@@ -14,7 +14,8 @@ export const Block = (props) => {
 };
 
 Block.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };
 
 /**
@@ -30,5 +31,6 @@ export const Inline = (props) => {
 };
 
 Inline.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };

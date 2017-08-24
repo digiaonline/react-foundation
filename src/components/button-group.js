@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Breakpoints, ButtonGroupColors, ButtonGroupSizes } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
 
 /**
  * Button group component.
@@ -33,6 +33,7 @@ export const ButtonGroup = (props) => {
 
 ButtonGroup.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   color: PropTypes.oneOf(objectValues(ButtonGroupColors)),
   size: PropTypes.oneOf(objectValues(ButtonGroupSizes)),
   stackFor: PropTypes.oneOf(objectValues(Breakpoints)),

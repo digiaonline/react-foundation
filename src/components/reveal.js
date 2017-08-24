@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Reveal component.
@@ -30,6 +30,7 @@ export const Reveal = (props) => {
 
 Reveal.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isTiny: PropTypes.bool,
   isSmall: PropTypes.bool,
   isLarge: PropTypes.bool,

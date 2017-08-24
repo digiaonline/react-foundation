@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * FlexVideo component.
@@ -27,6 +27,7 @@ export const FlexVideo = (props) => {
 
 FlexVideo.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isWidescreen: PropTypes.bool,
   isVimeo: PropTypes.bool
 };

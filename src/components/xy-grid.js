@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GutterTypes, ExtendedBreakpoints } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, isDefined, objectValues, addBreakpoint, setDirection } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, isDefined, objectValues, addBreakpoint, setDirection } from '../utils';
 
 /**
  * Grid container component.
@@ -27,6 +27,7 @@ export const GridContainer = (props) => {
 
 GridContainer.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   fluid: PropTypes.bool,
   full: PropTypes.bool
 };
@@ -59,6 +60,7 @@ export const Grid = (props) => {
 
 Grid.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   vertical: PropTypes.bool,
   gutters: PropTypes.oneOf(objectValues(GutterTypes)),
   upOnSmall: PropTypes.number,
@@ -97,6 +99,7 @@ export const Cell = (props) => {
 
 Cell.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   small: PropTypes.number,
   medium: PropTypes.number,
   large: PropTypes.number,

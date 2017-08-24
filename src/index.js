@@ -20,4 +20,4 @@ export { Switch, SwitchInput, SwitchPaddle, SwitchActive, SwitchInactive } from 
 export { Thumbnail, ThumbnailLink } from './components/thumbnail';
 export { Tabs, TabItem, TabsContent, TabPanel } from './components/tabs';
 export { TopBar, TopBarTitle, TopBarLeft, TopBarRight } from './components/top-bar';
-export { Breakpoints, Colors, Sizes, Alignments, FloatTypes, InputTypes } from './enums';
+export { Breakpoints, Colors, Sizes, Alignments, FloatTypes, InputTypes, GutterTypes, ExtendedBreakpoints, SpaceControls } from './enums';

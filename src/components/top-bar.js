@@ -1,5 +1,5 @@
 import React from 'react';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Top bar component.
@@ -21,7 +21,8 @@ export const TopBar = (props) => {
 };
 
 TopBar.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };
 
 /**
@@ -43,7 +44,8 @@ export const TopBarTitle = (props) => {
 };
 
 TopBarTitle.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };
 
 /**
@@ -65,7 +67,8 @@ export const TopBarLeft = (props) => {
 };
 
 TopBarLeft.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };
 
 /**
@@ -87,5 +90,6 @@ export const TopBarRight = props => {
 };
 
 TopBarRight.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };

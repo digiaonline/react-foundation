@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonSizes, ButtonColors } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
 
 /**
  * Button property types.
@@ -10,6 +10,7 @@ import { GeneralPropTypes, createClassName, generalClassNames, removeProps, obje
  */
 const ButtonPropTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   color: PropTypes.oneOf(objectValues(ButtonColors)),
   size: PropTypes.oneOf(objectValues(ButtonSizes)),
   isHollow: PropTypes.bool,

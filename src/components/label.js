@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LabelColors } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
 
 /**
  * Label component.
@@ -25,5 +25,6 @@ export const Label = (props) => {
 
 Label.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   color: PropTypes.oneOf(objectValues(LabelColors))
 };

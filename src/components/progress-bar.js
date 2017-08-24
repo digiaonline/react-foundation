@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ProgressColors } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
 
 /**
  * Progress component.
@@ -42,6 +42,7 @@ export const Progress = (props) => {
 
 Progress.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   min: PropTypes.number,
   max: PropTypes.number,
   value: PropTypes.number,
@@ -94,6 +95,7 @@ export const ProgressMeterWithText = (props) => {
 
 ProgressMeterWithText.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   text: PropTypes.string.isRequired
 };
 
@@ -139,6 +141,7 @@ export const NativeProgress = (props) => {
 
 NativeProgress.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   max: PropTypes.number,
   value: PropTypes.number,
   color: PropTypes.oneOf(objectValues(ProgressColors))

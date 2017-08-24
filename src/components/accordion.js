@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Accordion component.
@@ -23,6 +23,7 @@ export const Accordion = (props) => {
 
 Accordion.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   children: PropTypes.any,
 };
 
@@ -49,6 +50,7 @@ export const AccordionItem = (props) => {
 
 AccordionItem.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isActive: PropTypes.bool
 };
 
@@ -75,6 +77,7 @@ export const AccordionContent = (props) => {
 
 AccordionContent.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isActive: PropTypes.bool
 };
 
@@ -98,4 +101,5 @@ export const AccordionTitle = (props) => {
 
 AccordionTitle.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
 };

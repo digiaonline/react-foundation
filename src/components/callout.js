@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CalloutColors, CalloutSizes } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, objectValues } from '../utils';
 
 /**
  * Callout component.
@@ -26,6 +26,7 @@ export const Callout = props => {
 
 Callout.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   color: PropTypes.oneOf(objectValues(CalloutColors)),
   size: PropTypes.oneOf(objectValues(CalloutSizes))
 };

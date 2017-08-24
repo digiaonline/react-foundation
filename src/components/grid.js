@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HorizontalAlignments, VerticalAlignments } from '../enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, isDefined } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, isDefined } from '../utils';
 
 /**
  * Row component.
@@ -48,6 +48,7 @@ export const Row = (props) => {
 
 Row.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   upOnSmall: PropTypes.number,
   upOnMedium: PropTypes.number,
   upOnLarge: PropTypes.number,
@@ -116,6 +117,7 @@ export const Column = (props) => {
 
 Column.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   small: PropTypes.number,
   medium: PropTypes.number,
   large: PropTypes.number,

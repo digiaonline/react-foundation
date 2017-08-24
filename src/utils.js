@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Breakpoints, FloatTypes } from './enums';
+import { Breakpoints, FloatTypes, HorizontalAlignments, VerticalAlignments, SpaceControls, ExtendedBreakpoints } from './enums';
 
 /**
  * Property types for general properties.
@@ -135,7 +135,7 @@ export function addBreakpoint(prop, size) {
 }
 
 /**
- * Sets grid and gutters direction (horizontal or vertical).
+ * Sets direction for grid and gutters (horizontal or vertical).
  *
  * @param {boolean} isVertical
  * @param {String} gutters
@@ -147,4 +147,56 @@ export function setDirection(isVertical, gutters = null) {
   } else {
     return isVertical === true ? 'grid-y' : 'grid-x';
   }
+}
+
+// Flexbox Utilities
+
+/**
+ * Property types for flexbox utilities.
+ *
+ * @returns {Object}
+ */
+export const FlexboxPropTypes = {
+  alignX: PropTypes.oneOf(objectValues(HorizontalAlignments)),
+  alignY: PropTypes.oneOf(objectValues(VerticalAlignments)),
+  selfAlignX: PropTypes.oneOf(objectValues(HorizontalAlignments)),
+  selfAlignY: PropTypes.oneOf(objectValues(VerticalAlignments)),
+  centerAlign: PropTypes.bool,
+  flexContainer: PropTypes.bool,
+  flexDirRow: PropTypes.oneOf(objectValues(ExtendedBreakpoints)),
+  flexDirRowRev: PropTypes.oneOf(objectValues(ExtendedBreakpoints)),
+  flexDirCol: PropTypes.oneOf(objectValues(ExtendedBreakpoints)),
+  flexDirColRev: PropTypes.oneOf(objectValues(ExtendedBreakpoints)),
+  flexChild: PropTypes.oneOf(objectValues(SpaceControls)),
+  flexOrder: PropTypes.number,
+  flexOrderSmall: PropTypes.number,
+  flexOrderMedium: PropTypes.number,
+  flexOrderLarge: PropTypes.number,
+};
+
+/**
+ * Parses the flexbox class names from the given properties.
+ *
+ * @param {Object} props
+ * @returns {Object}
+ */
+export function flexboxClassNames(props) {
+  const flexClassNames = {
+    'flex-container': props.flexContainer,
+    'align-center-middle': props.centerAlign,
+  };
+
+  if (isDefined(props.alignX)) flexClassNames[`align-${props.alignX}`] = true;
+  if (isDefined(props.alignY)) flexClassNames[`align-${props.alignY}`] = true;
+  if (isDefined(props.flexDirRow)) flexClassNames[addBreakpoint('flex-dir-row', props.flexDirRow)] = true;
+  if (isDefined(props.flexDirRowRev)) flexClassNames[addBreakpoint('flex-dir-row-reverse', props.flexDirRowRev)] = true;
+  if (isDefined(props.flexDirCol)) flexClassNames[addBreakpoint('flex-dir-column', props.flexDirCol)] = true;
+  if (isDefined(props.flexDirColRev)) flexClassNames[addBreakpoint('flex-dir-column-reverse', props.flexDirColRev)] = true;
+  if (isDefined(props.flexChild)) flexClassNames[`flex-child-${props.flexChild}`] = true;
+  if (isDefined(props.flexOrder)) flexClassNames[`order-${props.flexOrder}`] = true;
+  if (isDefined(props.flexOrderSmall)) flexClassNames[`small-order-${props.flexOrder}`] = true;
+  if (isDefined(props.flexOrderMedium)) flexClassNames[`medium-order-${props.flexOrder}`] = true;
+  if (isDefined(props.flexOrderLarge)) flexClassNames[`large-order-${props.flexOrder}`] = true;
+
+  return flexClassNames;
 }

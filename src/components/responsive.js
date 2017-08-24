@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TopBar } from './top-bar';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps } from '../utils';
 
 // Default pixel value when title bar is displayed and top bar is hidden.
 const DEFAULT_BREAKPOINT = 640;
@@ -88,6 +88,7 @@ export class ResponsiveNavigation extends Component {
 
 ResponsiveNavigation.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   breakpoint: PropTypes.number.isRequired
 };
 

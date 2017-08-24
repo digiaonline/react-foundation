@@ -1,5 +1,5 @@
 import React from 'react';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Close button component.
@@ -21,5 +21,6 @@ export const CloseButton = props => {
 };
 
 CloseButton.propTypes = {
-  ...GeneralPropTypes
+  ...GeneralPropTypes,
+  ...FlexboxPropTypes
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
+import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys } from '../utils';
 
 /**
  * Breadcrumbs component.
@@ -47,5 +47,6 @@ export const BreadcrumbItem = (props) => {
 
 BreadcrumbItem.propTypes = {
   ...GeneralPropTypes,
+  ...FlexboxPropTypes,
   isDisabled: PropTypes.bool
 };

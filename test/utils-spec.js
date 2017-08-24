@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from 'enzyme';
 import { expect } from 'chai';
-import { Breakpoints } from '../src/enums';
-import { removeProps, createClassName, generalClassNames, objectValues } from '../src/utils';
+import { Breakpoints, ExtendedBreakpoints, SpaceControls } from '../src/enums';
+import { removeProps, createClassName, generalClassNames, objectValues, flexboxClassNames } from '../src/utils';
+import {FlexVideo} from '../src/components/flex-video';
 
 describe('Utilities', () => {
 
@@ -34,6 +35,14 @@ describe('Utilities', () => {
     expect(objectValues(obj)).to.include('bar');
     expect(objectValues(obj)).to.include('baz');
     expect(objectValues(obj)).to.include('qux');
+  });
+
+  describe('flexboxClassNames', () => {
+    const props = {flexDirRow: ExtendedBreakpoints.MEDIUM, flexOrderSmall: 4, flexChild: SpaceControls.GROW};
+    const classNames = generalClassNames(props);
+    expect(classNames['medium-flex-dir-row']).to.equal.true;
+    expect(classNames['small-order-4']).to.equal.true;
+    expect(classNames['flex-child-grow']).to.equal.true;
   });
 
 });
