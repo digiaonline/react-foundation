@@ -208,24 +208,6 @@ describe('Column component', () => {
     expect(component).to.not.have.attr('pushOnLarge');
   });
 
-  it('sets push on small', () => {
-    const component = render(<Column pushOnSmall={1}/>);
-    expect(component).to.have.className('small-push-1');
-    expect(component).to.not.have.attr('pushOnSmall');
-  });
-
-  it('sets push on medium', () => {
-    const component = render(<Column pushOnMedium={2}/>);
-    expect(component).to.have.className('medium-push-2');
-    expect(component).to.not.have.attr('pushOnMedium');
-  });
-
-  it('sets push on large', () => {
-    const component = render(<Column pushOnLarge={3}/>);
-    expect(component).to.have.className('large-push-3');
-    expect(component).to.not.have.attr('pushOnLarge');
-  });
-
   it('sets order on small', () => {
     const component = render(<Column orderOnSmall={1}/>);
     expect(component).to.have.className('small-order-1');
