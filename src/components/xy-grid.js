@@ -90,6 +90,7 @@ export const Cell = (props) => {
     isDefined(props.offsetOnSmall) ? `small-offset-${props.offsetOnSmall}` : null,
     isDefined(props.offsetOnMedium) ? `medium-offset-${props.offsetOnMedium}` : null,
     isDefined(props.offsetOnLarge) ? `large-offset-${props.offsetOnLarge}` : null,
+    generalClassNames(props)
   );
 
   const passProps = removeProps(props, objectKeys(Cell.propTypes));
