@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TopBar } from './top-bar';
 import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps } from '../utils';
+import ExecutionEnvironment from 'fbjs/lib/ExecutionEnvironment';
 
 // Default pixel value when title bar is displayed and top bar is hidden.
 const DEFAULT_BREAKPOINT = 640;
@@ -28,11 +29,15 @@ export class ResponsiveNavigation extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.update);
+    if (ExecutionEnvironment.canUseDOM) {
+      window.addEventListener('resize', this.update);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.update);
+    if (ExecutionEnvironment.canUseDOM) {
+      window.removeEventListener('resize', this.update);
+    }
   }
 
   /**
@@ -43,10 +48,12 @@ export class ResponsiveNavigation extends Component {
   update() {
     const { breakpoint } = this.props;
 
-    this.setState({
-      isTitleBarVisible: window.innerWidth < breakpoint,
-      isTopBarVisible: window.innerWidth >= breakpoint
-    });
+    if (ExecutionEnvironment.canUseDOM) {
+      this.setState({
+        isTitleBarVisible: window.innerWidth < breakpoint,
+        isTopBarVisible: window.innerWidth >= breakpoint
+      });
+    }
   }
 
   /**
