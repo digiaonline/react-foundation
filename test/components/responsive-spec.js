@@ -101,7 +101,10 @@ describe('TitleBar component', () => {
     const component = render(<TitleBar className="my-title-bar"/>);
     expect(component).to.have.className('my-title-bar');
   });
-
+  it('does not carry over non-DOM props', () => {
+    const component = shallow(<TitleBar isHidden={true} />);
+    expect(component).to.not.have.prop('isHidden');
+  });
 });
 
 describe('MenuIcon component', () => {
@@ -136,6 +139,11 @@ describe('MenuIcon component', () => {
     expect(component).to.have.text('Icon');
   });
 
+  it('does not carry over non-DOM props', () => {
+    const component = shallow(<MenuIcon isHidden={true} />);
+    expect(component).to.not.have.prop('isHidden');
+  });
+
 });
 
 describe('TitleBarTitle component', () => {
@@ -163,6 +171,11 @@ describe('TitleBarTitle component', () => {
   it('sets contents', () => {
     const component = render(<TitleBarTitle>Menu</TitleBarTitle>);
     expect(component).to.have.text('Menu');
+  });
+
+  it('does not carry over non-DOM props', () => {
+    const component = shallow(<TitleBarTitle isHidden={true} />);
+    expect(component).to.not.have.prop('isHidden');
   });
 
 });
