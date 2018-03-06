@@ -1,6 +1,6 @@
 {
   "name": "react-foundation",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Foundation as React components.",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -51,6 +51,7 @@
   "homepage": "https://github.com/nordsoftware/react-foundation#readme",
   "dependencies": {
     "classnames": "^2.2.3",
+    "fbjs": "^0.8.16",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
