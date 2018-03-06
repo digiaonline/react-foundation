@@ -20,7 +20,7 @@ export const GridContainer = (props) => {
     generalClassNames(props)
   );
 
-  const passProps = removeProps(props, objectKeys(Grid.propTypes));
+  const passProps = removeProps(props, objectKeys(GridContainer.propTypes));
 
   return <div {...passProps} className={className}/>;
 };

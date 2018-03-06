@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render, shallow } from 'enzyme';
 import { expect } from 'chai';
-import { GutterTypes, ExtendedBreakpoints } from '../../src/enums'
+import { GutterTypes, ExtendedBreakpoints } from '../../src/enums';
 import { GridContainer, Grid, Cell } from '../../src/components/xy-grid';
 
 describe('GridContainer component', () => {
@@ -27,15 +27,16 @@ describe('GridContainer component', () => {
   });
 
   it('sets fluid', () => {
-    const component = render(<GridContainer fluid/>);
+    const component = shallow(<GridContainer fluid/>);
     expect(component).to.have.className('fluid');
+    expect(component).to.not.have.prop('fluid');
   });
 
   it('sets full', () => {
-    const component = render(<GridContainer full/>);
+    const component = shallow(<GridContainer full/>);
     expect(component).to.have.className('full');
+    expect(component).to.not.have.prop('full');
   });
-
 });
 
 describe('Grid component', () => {
