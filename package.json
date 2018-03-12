@@ -18,8 +18,8 @@
     "precommit": "yarn lint && yarn test",
     "prepublish": "yarn lint && yarn compile",
     "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive",
-    "test:cover": "istanbul cover _mocha -- --compilers js:babel-core/register --require test/index.js --recursive",
-    "test:watch": "yarn test -- --watch --reporter min"
+    "test:cover": "istanbul cover _mocha --compilers js:babel-core/register --require test/index.js --recursive",
+    "test:watch": "yarn test --watch --reporter min"
   },
   "repository": {
     "type": "git",
