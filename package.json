@@ -17,7 +17,7 @@
     "lint": "eslint src test",
     "precommit": "yarn lint && yarn test",
     "prepublishOnly": "yarn lint && yarn compile",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive --colors",
     "test:cover": "istanbul cover _mocha -- --compilers js:babel-core/register --require test/index.js --recursive",
     "test:watch": "yarn test -- --watch --reporter min"
   },
