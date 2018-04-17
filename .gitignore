@@ -3,4 +3,3 @@ lib
 coverage
 node_modules
 *.log
-package-lock.json

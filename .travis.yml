@@ -8,6 +8,9 @@ node_js:
   - "lts/carbon" # 8.x
   - "stable"
 
+before_install: npm install -g npm@latest
+install: npm ci 
+
 script:
   - npm run lint
   - npm run test:cover
