@@ -143,5 +143,6 @@ Column.propTypes = {
   expandOnMedium: PropTypes.bool,
   expandOnLarge: PropTypes.bool,
   isShrunk: PropTypes.bool,
-  isLast: PropTypes.bool
+  isLast: PropTypes.bool,
+  isColumn: PropTypes.bool,
 };
