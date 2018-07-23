@@ -14,6 +14,7 @@ const ButtonPropTypes = {
   color: PropTypes.oneOf(objectValues(ButtonColors)),
   size: PropTypes.oneOf(objectValues(ButtonSizes)),
   isHollow: PropTypes.bool,
+  isClear: PropTypes.bool,
   isExpanded: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isDropdown: PropTypes.bool
@@ -63,6 +64,7 @@ function createButtonClassName(props) {
     props.color,
     {
       'hollow': props.isHollow,
+      'clear': props.isClear,
       'expanded': props.isExpanded,
       'disabled': props.isDisabled,
       'dropdown': props.isDropdown,

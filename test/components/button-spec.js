@@ -46,6 +46,12 @@ describe('Button component', () => {
     expect(component).to.not.have.attr('isHollow');
   });
 
+  it('sets clear', () => {
+    const component = render(<Button isClear/>);
+    expect(component).to.have.className('clear');
+    expect(component).to.not.have.attr('isClear');
+  });
+
   it('sets expanded', () => {
     const component = render(<Button isExpanded/>);
     expect(component).to.have.className('expanded');
