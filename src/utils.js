@@ -181,22 +181,19 @@ export const FlexboxPropTypes = {
  * @returns {Object}
  */
 export function flexboxClassNames(props) {
-  const flexClassNames = {
+  return {
     'flex-container': props.flexContainer,
     'align-center-middle': props.centerAlign,
+    [`align-${props.alignX}`]: props.alignX,
+    [`align-${props.alignY}`]: props.alignY,
+    [addBreakpoint('flex-dir-row', props.flexDirRow)]: props.flexDirRow,
+    [addBreakpoint('flex-dir-row-reverse', props.flexDirRowRev)]: props.flexDirRowRev,
+    [addBreakpoint('flex-dir-column', props.flexDirCol)]: props.flexDirCol,
+    [addBreakpoint('flex-dir-column-reverse', props.flexDirColRev)]: props.flexDirColRev,
+    [`flex-child-${props.flexChild}`]: props.flexChild,
+    [`order-${props.flexOrder}`]: props.flexOrder,
+    [`small-order-${props.flexOrder}`]: props.flexOrderSmall,
+    [`medium-order-${props.flexOrder}`]: props.flexOrderMedium,
+    [`large-order-${props.flexOrder}`]: props.flexOrderLarge
   };
-
-  if (isDefined(props.alignX)) flexClassNames[`align-${props.alignX}`] = true;
-  if (isDefined(props.alignY)) flexClassNames[`align-${props.alignY}`] = true;
-  if (isDefined(props.flexDirRow)) flexClassNames[addBreakpoint('flex-dir-row', props.flexDirRow)] = true;
-  if (isDefined(props.flexDirRowRev)) flexClassNames[addBreakpoint('flex-dir-row-reverse', props.flexDirRowRev)] = true;
-  if (isDefined(props.flexDirCol)) flexClassNames[addBreakpoint('flex-dir-column', props.flexDirCol)] = true;
-  if (isDefined(props.flexDirColRev)) flexClassNames[addBreakpoint('flex-dir-column-reverse', props.flexDirColRev)] = true;
-  if (isDefined(props.flexChild)) flexClassNames[`flex-child-${props.flexChild}`] = true;
-  if (isDefined(props.flexOrder)) flexClassNames[`order-${props.flexOrder}`] = true;
-  if (isDefined(props.flexOrderSmall)) flexClassNames[`small-order-${props.flexOrder}`] = true;
-  if (isDefined(props.flexOrderMedium)) flexClassNames[`medium-order-${props.flexOrder}`] = true;
-  if (isDefined(props.flexOrderLarge)) flexClassNames[`large-order-${props.flexOrder}`] = true;
-
-  return flexClassNames;
 }

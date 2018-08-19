@@ -1,7 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GutterTypes, ExtendedBreakpoints } from '../enums';
-import { GeneralPropTypes, FlexboxPropTypes, createClassName, generalClassNames, removeProps, objectKeys, isDefined, objectValues, addBreakpoint, setDirection } from '../utils';
+import {
+  GeneralPropTypes,
+  FlexboxPropTypes,
+  createClassName,
+  generalClassNames,
+  flexboxClassNames,
+  removeProps,
+  objectKeys,
+  isDefined,
+  objectValues,
+  addBreakpoint,
+  setDirection
+ } from '../utils';
 
 /**
  * Grid container component.
@@ -17,7 +29,8 @@ export const GridContainer = (props) => {
       'fluid': props.fluid,
       'full': props.full
     },
-    generalClassNames(props)
+    generalClassNames(props),
+    flexboxClassNames(props)
   );
 
   const passProps = removeProps(props, objectKeys(GridContainer.propTypes));
@@ -50,7 +63,8 @@ export const Grid = (props) => {
     isDefined(props.collapseOnMedium) ? `medium-${props.collapseOnMedium}-collapse` : null,
     isDefined(props.collapseOnLarge) ? `large-${props.collapseOnLarge}-collapse` : null,
     isDefined(props.gridFrame) ? addBreakpoint('grid-frame', props.gridFrame) : null,
-    generalClassNames(props)
+    generalClassNames(props),
+    flexboxClassNames(props)
   );
 
   const passProps = removeProps(props, objectKeys(Grid.propTypes));
@@ -90,7 +104,8 @@ export const Cell = (props) => {
     isDefined(props.offsetOnSmall) ? `small-offset-${props.offsetOnSmall}` : null,
     isDefined(props.offsetOnMedium) ? `medium-offset-${props.offsetOnMedium}` : null,
     isDefined(props.offsetOnLarge) ? `large-offset-${props.offsetOnLarge}` : null,
-    generalClassNames(props)
+    generalClassNames(props),
+    flexboxClassNames(props)
   );
 
   const passProps = removeProps(props, objectKeys(Cell.propTypes));

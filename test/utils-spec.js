@@ -39,7 +39,7 @@ describe('Utilities', () => {
 
   describe('flexboxClassNames', () => {
     const props = {flexDirRow: ExtendedBreakpoints.MEDIUM, flexOrderSmall: 4, flexChild: SpaceControls.GROW};
-    const classNames = generalClassNames(props);
+    const classNames = flexboxClassNames(props);
     expect(classNames['medium-flex-dir-row']).to.equal.true;
     expect(classNames['small-order-4']).to.equal.true;
     expect(classNames['flex-child-grow']).to.equal.true;

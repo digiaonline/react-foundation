@@ -37,6 +37,12 @@ describe('GridContainer component', () => {
     expect(component).to.have.className('full');
     expect(component).to.not.have.prop('full');
   });
+
+  it('sets flexbox class name', () => {
+    const component = shallow(<GridContainer alignX="center"/>);
+    expect(component).to.have.className('align-center');
+    expect(component).to.not.have.prop('alignX');
+  });
 });
 
 describe('Grid component', () => {
@@ -130,6 +136,12 @@ describe('Grid component', () => {
   it('sets grid frame on large', () => {
     const component = render(<Grid gridFrame={ExtendedBreakpoints.LARGE}/>);
     expect(component).to.have.className('large-grid-frame');
+  });
+
+  it('sets flexbox class name', () => {
+    const component = shallow(<Grid alignX="center"/>);
+    expect(component).to.have.className('align-center');
+    expect(component).to.not.have.prop('alignX');
   });
 });
 
@@ -229,5 +241,11 @@ describe('Cell component', () => {
   it('sets shrink on large', () => {
     const component = render(<Cell shrink={ExtendedBreakpoints.LARGE}/>);
     expect(component).to.have.className('large-shrink');
+  });
+  
+  it('sets flexbox class name', () => {
+    const component = shallow(<Cell alignX="center"/>);
+    expect(component).to.have.className('align-center');
+    expect(component).to.not.have.prop('alignX');
   });
 });
