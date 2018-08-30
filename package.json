@@ -19,7 +19,8 @@
     "prepublishOnly": "yarn lint && yarn compile",
     "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive --colors",
     "test:cover": "istanbul cover _mocha -- --compilers js:babel-core/register --require test/index.js --recursive",
-    "test:watch": "yarn test -- --watch --reporter min"
+    "test:watch": "yarn test -- --watch --reporter min",
+    "postinstall": "opencollective-postinstall"
   },
   "repository": {
     "type": "git",
@@ -52,6 +53,7 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "fbjs": "^0.8.16",
+    "opencollective": "^1.0.3",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
@@ -88,5 +90,9 @@
       "es2015",
       "react"
     ]
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-foundation"
   }
 }
