@@ -5,9 +5,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ea90da79f63c9d5dab1a/maintainability)](https://codeclimate.com/github/digiaonline/react-foundation/maintainability)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/digiaonline/react-foundation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/digiaonline/react-foundation/?branch=master)
 [![StyleCI](https://styleci.io/repos/53612920/shield?style=flat)](https://styleci.io/repos/53612920)
-[![npm version](https://img.shields.io/npm/v/react-foundation.svg)](https://www.npmjs.com/package/react-foundation)
+[[![npm version](https://img.shields.io/npm/v/react-foundation.svg)](https://www.npmjs.com/package/react-foundation)
 [![npm downloads](https://img.shields.io/npm/dt/react-foundation.svg)](https://www.npmjs.com/package/react-foundation)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nordsoftware/react-foundation/master/LICENSE)
+![Backers on Open Collective](https://opencollective.com/react-foundation/backers/badge.svg)](#backers) 
+[![Sponsors on Open Collective](https://opencollective.com/react-foundation/sponsors/badge.svg)](#sponsors) 
 
 [Foundation](http://foundation.zurb.com/sites/docs/) as [React](https://facebook.github.io/react/) components.
 
@@ -86,6 +88,36 @@ Please read our [guidelines](.github/CONTRIBUTING.md).
 ## Credits
 
 * Thanks to [@jmreidy](https://github.com/jmreidy) for releasing the `react-foundation` package name to us on [NPM](https://www.npmjs.com/).
+
+### Contributors
+
+This project exists thanks to all the people who contribute. 
+<a href="graphs/contributors"><img src="https://opencollective.com/react-foundation/contributors.svg?width=890&button=false" /></a>
+
+
+### Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/react-foundation#backer)]
+
+<a href="https://opencollective.com/react-foundation#backers" target="_blank"><img src="https://opencollective.com/react-foundation/backers.svg?width=890"></a>
+
+
+### Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/react-foundation#sponsor)]
+
+<a href="https://opencollective.com/react-foundation/sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/react-foundation/sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-foundation/sponsor/9/avatar.svg"></a>
+
+
 
 ## License
 
