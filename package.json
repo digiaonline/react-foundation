@@ -53,7 +53,7 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "fbjs": "^0.8.16",
-    "opencollective": "^1.0.3",
+    "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
