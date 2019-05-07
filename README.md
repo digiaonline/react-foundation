@@ -75,15 +75,46 @@ Install library:
 npm install react-foundation --save
 ```
 
+Install [foundation-sites](https://www.npmjs.com/package/foundation-sites):
+
+```bash
+npm install foundation-sites --save
+```
+
 ## Usage
 
 ```js
-import Foundation from 'react-foundation';
+// Add Foundation to index.js
+import 'foundation-sites/dist/css/foundation.min.css';
+
+// import components
+import { Button, Colors } from 'react-foundation';
 
 // Use components ...
+function SubmitButton() {
+  return <Button color={Colors.SUCCESS}>Submit</Button>;
+}
 ```
 
 Documentation is at [https://react.foundation](https://react.foundation) and you can use our [React Boilerplate](https://github.com/digiaonline/react-boilerplate) as a reference.
+
+*Note:* Newer versions of `foundation-sites` do not offer out of the box support for `<Row/>` and `<Column/>` components. If working with a newer version, `<Grid/>` and `<Cell/>` components should be used instead.
+
+```js
+// Previous versions
+<Row className="display">
+  <Column small={2} large={4}>4 columns</Column>
+  <Column small={4} large={4}>4 columns</Column>
+  <Column small={6} large={4}>4 columns</Column>
+</Row>
+
+// Newer versions
+<Grid className="display">
+  <Cell small={2} large={4}>4 columns</Cell>
+  <Cell small={4} large={4}>4 columns</Cell>
+  <Cell small={6} large={4}>4 columns</Cell>
+</Grid>
+```
 
 ## Contributing
 
