@@ -1,8 +1,5 @@
 language: node_js
 
-# Use container-based infrastructure
-sudo: false
-
 node_js:
   - "lts/boron"   # 6.x
   - "lts/carbon"  # 8.x
