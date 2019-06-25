@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nordsoftware/react-foundation.git"
+    "url": "git+https://github.com/digiaonline/react-foundation.git"
   },
   "keywords": [
     "badge",
@@ -46,9 +46,9 @@
   "author": "Christoffer Niska <christofferniska@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nordsoftware/react-foundation/issues"
+    "url": "https://github.com/digiaonline/react-foundation/issues"
   },
-  "homepage": "https://github.com/nordsoftware/react-foundation#readme",
+  "homepage": "https://github.com/digiaonline/react-foundation#readme",
   "dependencies": {
     "classnames": "^2.2.6",
     "fbjs": "^0.8.16",
