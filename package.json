@@ -17,8 +17,8 @@
     "lint": "eslint src test",
     "precommit": "yarn lint && yarn test",
     "prepublishOnly": "yarn lint && yarn compile",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive --colors",
-    "test:cover": "istanbul cover _mocha -- --compilers js:babel-core/register --require test/index.js --recursive",
+    "test": "NODE_ENV=test mocha --require babel-core/register --require test/index.js --recursive --colors",
+    "test:cover": "istanbul cover _mocha -- --require babel-core/register --require test/index.js --recursive",
     "test:watch": "yarn test -- --watch --reporter min"
   },
   "repository": {
@@ -76,7 +76,7 @@
     "husky": "^0.13.4",
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^6.1.4",
     "react": "^0.14.7",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
