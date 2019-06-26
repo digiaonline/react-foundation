@@ -68,7 +68,7 @@
     "cheerio": "^0.20.0",
     "codeclimate-test-reporter": "^0.5.1",
     "enzyme": "^2.1.0",
-    "eslint": "^2.3.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-react": "^4.2.1",
     "estraverse-fb": "^1.3.2",
     "expect": "^1.15.1",
