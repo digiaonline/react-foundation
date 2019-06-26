@@ -1,13 +1,8 @@
 language: node_js
 
-# Use container-based infrastructure
-sudo: false
-
 node_js:
-  - "lts/boron"   # 6.x
-  - "lts/carbon"  # 8.x
-  - "lts/dubnium" # 10.x
-  - "stable"
+  - "node"  # latest stable release
+  - "lts/*" # latest LTS release
 
 script:
   - npm run lint
