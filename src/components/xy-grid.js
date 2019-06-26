@@ -13,7 +13,7 @@ import {
   objectValues,
   addBreakpoint,
   setDirection
- } from '../utils';
+} from '../utils';
 
 /**
  * Grid container component.
