@@ -1,9 +1,6 @@
-import React from 'react';
-import { render } from 'enzyme';
 import { expect } from 'chai';
-import { Breakpoints, ExtendedBreakpoints, SpaceControls } from '../src/enums';
-import { removeProps, createClassName, generalClassNames, objectValues, flexboxClassNames } from '../src/utils';
-import {FlexVideo} from '../src/components/flex-video';
+import { Breakpoints, ExtendedBreakpoints, HorizontalAlignments, SpaceControls, VerticalAlignments } from '../src/enums';
+import { createClassName, flexboxClassNames, generalClassNames, objectValues, removeProps } from '../src/utils';
 
 describe('Utilities', () => {
 
@@ -23,10 +20,10 @@ describe('Utilities', () => {
   it('generalClassNames', () => {
     const props = {showFor: Breakpoints.MEDIUM, isHidden: true, showForSr: false, float: 'left'};
     const classNames = generalClassNames(props);
-    expect(classNames['show-for-medium']).to.equal.true;
-    expect(classNames['hide']).to.equal.true;
-    expect(classNames['show-for-sr']).to.equal.false;
-    expect(classNames['float-left']).to.equal.true;
+    expect(classNames['show-for-medium']).to.equal(true);
+    expect(classNames['hide']).to.equal(true);
+    expect(classNames['show-for-sr']).to.equal(false);
+    expect(classNames['float-left']).to.equal(true);
   });
 
   it('objectValues', () => {
@@ -38,11 +35,20 @@ describe('Utilities', () => {
   });
 
   it('flexboxClassNames', () => {
-    const props = {flexDirRow: ExtendedBreakpoints.MEDIUM, flexOrderSmall: 4, flexChild: SpaceControls.GROW};
+    const props = {
+      flexDirRow: ExtendedBreakpoints.MEDIUM,
+      flexOrder: 2,
+      flexOrderSmall: 4,
+      flexChild: SpaceControls.GROW,
+      selfAlignX: HorizontalAlignments.RIGHT,
+      selfAlignY: VerticalAlignments.BOTTOM
+    };
     const classNames = flexboxClassNames(props);
-    expect(classNames['medium-flex-dir-row']).to.equal.true;
-    expect(classNames['small-order-4']).to.equal.true;
-    expect(classNames['flex-child-grow']).to.equal.true;
+    expect(classNames['medium-flex-dir-row']).to.equal('medium');
+    expect(classNames['small-order-4']).to.equal(4);
+    expect(classNames['flex-child-grow']).to.equal('grow');
+    expect(classNames['text-right']).to.equal('right');
+    expect(classNames['align-self-bottom']).to.equal('bottom');
   });
 
 });
