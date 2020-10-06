@@ -12,7 +12,7 @@
 
 ## Demo
 
-[https://react.foundation](https://react.foundation)
+https://digia.online/react-foundation-docs/
 
 [Components with Bit](https://bitsrc.io/digiaonline/react-foundation)
 
@@ -96,7 +96,7 @@ function SubmitButton() {
 }
 ```
 
-Documentation is at [https://react.foundation](https://react.foundation) and you can use our [React Boilerplate](https://github.com/digiaonline/react-boilerplate) as a reference.
+Documentation is at https://digia.online/react-foundation-docs/.
 
 *Note:* Newer versions of `foundation-sites` do not offer out of the box support for `<Row/>` and `<Column/>` components. If working with a newer version, `<Grid/>` and `<Cell/>` components should be used instead.
 
