@@ -122,6 +122,7 @@ Please read our [guidelines](.github/CONTRIBUTING.md).
 
 ## Credits
 
+* Thanks to [Nord Software](https://twitter.com/nordsoftware) and [Digia](https://digia.com/en/) for sponsoring initial development.
 * Thanks to [@jmreidy](https://github.com/jmreidy) for releasing the `react-foundation` package name to us on [NPM](https://www.npmjs.com/).
 
 ## License
