@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Breakpoints, FloatTypes, HorizontalAlignments, VerticalAlignments, SpaceControls, ExtendedBreakpoints } from './enums';
+import PropTypes from 'prop-types';
+import { Breakpoints, ExtendedBreakpoints, FloatTypes, HorizontalAlignments, SpaceControls, VerticalAlignments } from './enums';
 
 /**
  * Property types for general properties.
@@ -159,7 +159,7 @@ export function setDirection(isVertical, gutters = null) {
 export const FlexboxPropTypes = {
   alignX: PropTypes.oneOf(objectValues(HorizontalAlignments)),
   alignY: PropTypes.oneOf(objectValues(VerticalAlignments)),
-  selfAlignX: PropTypes.oneOf(objectValues(HorizontalAlignments)),
+  selfAlignX: PropTypes.oneOf(objectValues(removeProps(HorizontalAlignments, ['SPACED']))),
   selfAlignY: PropTypes.oneOf(objectValues(VerticalAlignments)),
   centerAlign: PropTypes.bool,
   flexContainer: PropTypes.bool,
@@ -186,14 +186,16 @@ export function flexboxClassNames(props) {
     'align-center-middle': props.centerAlign,
     [`align-${props.alignX}`]: props.alignX,
     [`align-${props.alignY}`]: props.alignY,
+    [`text-${props.selfAlignX}`]: props.selfAlignX,
+    [`align-self-${props.selfAlignY}`]: props.selfAlignY,
     [addBreakpoint('flex-dir-row', props.flexDirRow)]: props.flexDirRow,
     [addBreakpoint('flex-dir-row-reverse', props.flexDirRowRev)]: props.flexDirRowRev,
     [addBreakpoint('flex-dir-column', props.flexDirCol)]: props.flexDirCol,
     [addBreakpoint('flex-dir-column-reverse', props.flexDirColRev)]: props.flexDirColRev,
     [`flex-child-${props.flexChild}`]: props.flexChild,
     [`order-${props.flexOrder}`]: props.flexOrder,
-    [`small-order-${props.flexOrder}`]: props.flexOrderSmall,
-    [`medium-order-${props.flexOrder}`]: props.flexOrderMedium,
-    [`large-order-${props.flexOrder}`]: props.flexOrderLarge
+    [`small-order-${props.flexOrderSmall}`]: props.flexOrderSmall,
+    [`medium-order-${props.flexOrderMedium}`]: props.flexOrderMedium,
+    [`large-order-${props.flexOrderLarge}`]: props.flexOrderLarge
   };
 }
