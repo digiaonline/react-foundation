@@ -51,7 +51,7 @@
   "homepage": "https://github.com/digiaonline/react-foundation#readme",
   "dependencies": {
     "classnames": "^2.2.6",
-    "fbjs": "^0.8.16",
+    "fbjs": "^3.0.0",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
