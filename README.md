@@ -1,6 +1,6 @@
 # React + Foundation
 
-[![Build Status](https://travis-ci.org/digiaonline/react-foundation.svg?branch=master)](https://travis-ci.org/digiaonline/react-foundation)
+[![Build](https://github.com/digiaonline/react-foundation/actions/workflows/test.yml/badge.svg)](https://github.com/digiaonline/react-foundation/actions)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ea90da79f63c9d5dab1a/test_coverage)](https://codeclimate.com/github/digiaonline/react-foundation/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ea90da79f63c9d5dab1a/maintainability)](https://codeclimate.com/github/digiaonline/react-foundation/maintainability)
 [![StyleCI](https://styleci.io/repos/53612920/shield?style=flat)](https://styleci.io/repos/53612920)
