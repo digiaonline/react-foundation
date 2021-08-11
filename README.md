@@ -8,7 +8,7 @@
 [![npm downloads](https://img.shields.io/npm/dt/react-foundation.svg)](https://www.npmjs.com/package/react-foundation)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/digiaonline/react-foundation/master/LICENSE)
 
-[Foundation](http://foundation.zurb.com/sites/docs/) as [React](https://facebook.github.io/react/) components.
+[Foundation](https://get.foundation/sites/docs/) as [React](https://reactjs.org/) components.
 
 ## Demo
 
@@ -23,10 +23,10 @@ https://digia.online/react-foundation-docs/
 
 ## Motivation
 
-[Foundation](http://foundation.zurb.com) is both feature-rich and easy to customize.
-[React](https://facebook.github.io/react/) on the other hand is awesome because of its simplicity.
+[Foundation](https://get.foundation/sites/docs/) is both feature-rich and easy to customize.
+[React](https://reactjs.org/) on the other hand is awesome because of its simplicity.
 It's even more awesome when combined with
-[Redux](http://redux.js.org/) and [Immutable](https://facebook.github.io/immutable-js/).
+[Redux](https://redux.js.org/) and [Immutable](https://immutable-js.com/).
 
 After building quite a few applications with React and Foundation we noticed that we were writing the
 same components over and over again. First we tried to find a library that would do the job,
