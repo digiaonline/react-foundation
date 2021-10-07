@@ -14,7 +14,7 @@
 
 https://digia.online/react-foundation-docs/
 
-[Components with Bit](https://bitsrc.io/digiaonline/react-foundation)
+[Components with Bit](https://bit.dev/digiaonline/react-foundation)
 
 <p align="center">
   <a href="https://bitsrc.io/digiaonline/react-foundation"><img src="https://i.imagesup.co/images2/0__05c740dc39b7e2.jpg"></a>
