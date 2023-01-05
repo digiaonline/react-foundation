@@ -16,4 +16,4 @@ Please note the following guidelines before submitting pull requests:
 
 * Make sure ESLint passes with `yarn lint`
 * All new features must be covered by unit tests: `yarn test`
-* Always create pull requests to the _master_ branch
+* Always create pull requests to the _main_ branch
